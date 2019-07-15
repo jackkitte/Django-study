@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <haed>
+    {% block head %}
+    <link rel="stylesheet" href="/static/style.css"/>
+    <title>{% block title %}{% endblock title %}</title>
+    {% endblock head %}
+  </head>
+  <body>
+    <div id="content">
+      {% block content %}
+      {% endblock content %}
+    </div>
+    <div id="footer">
+      {% block footer %}
+        &copy; Copyright 2018 by <a href="http://www.example.com/">Kakeru Tamashiro</a>.
+      {% endblock footer %}
+    </div>
+  </body>
+</html>
