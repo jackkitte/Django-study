@@ -36,9 +36,7 @@ def create_user(request):
         username = request.POST.get('username')
         email = request.POST.get('email')
         password = request.POST.get('password')
-        print("POST method")
         if form.is_valid():
-            print("form is_valid true")
             token = sha256(('eqd131' + str(username.encode('utf-8')) + ": " + str(email.encode('utf-8'))).encode('utf-8')).hexdigest()
             email_html = get_template('email.html').render(
                 {
@@ -54,10 +52,6 @@ def create_user(request):
                 is_active=False
             )
             user.save()
-            print(username)
-            print(email)
-            print(password)
-            print("before send mail")
             send_mail(email, '確認用メール', email_html)
 
             print("after send mail")
