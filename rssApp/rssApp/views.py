@@ -42,8 +42,8 @@ def post(request):
     return redirect("/")
 
 def login_view(request):
-    if request.method != 'POST':
-        return redirect("/")
+    # if request.method != 'POST':
+    #     return redirect("/")
 
     username = request.POST.get('username')
     password = request.POST.get('password')

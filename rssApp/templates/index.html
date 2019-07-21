@@ -51,6 +51,23 @@
                 <button class="btn btn-outline-success my-2 my-m-0" type="submit">送信</button>
               </form>
             </p>
+            <div classz="album py-5 bg-light">
+              <div class="container">
+                <div class="row">
+                  {% for page in pages %}
+                    <div class="col-md-4">
+                      <a href="{{ page.href }}">
+                        <div class="card mb-4 shadow-sm">
+                          <div class="card-body">
+                            <p class="card-text">{{ page.title }}</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
           {% else %}
             <h1>ログインするとフィードを追加できます</h1>
             <p>
@@ -61,23 +78,6 @@
         </div>
       </section>
 
-      <div classz="album py-5 bg-light">
-        <div class="container">
-          <div class="row">
-            {% for page in pages %}
-              <div class="col-md-4">
-                <a href="{{ page.href }}">
-                  <div class="card mb-4 shadow-sm">
-                    <div class="card-body">
-                      <p class="card-text">{{ page.title }}</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            {% endfor %}
-          </div>
-        </div>
-      </div>
     </main>
   </body>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
