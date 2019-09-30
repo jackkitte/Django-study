@@ -88,7 +88,7 @@ const messageModule = {
       context.commit('clear')
       context.commit('set', { 'error': payload.message })
     },
-    setWarningMesssage (context, payload) {
+    setWarningMesssages (context, payload) {
       context.commit('clear')
       context.commit('set', { 'warnings': payload.message })
     },
@@ -96,7 +96,7 @@ const messageModule = {
       context.commit('clear')
       context.commit('set', { 'info': payload.message })
     },
-    clearMessage (context) {
+    clearMessages (context) {
       context.commit('clear')
     }
   }
