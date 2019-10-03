@@ -19,6 +19,9 @@ djangorestframework = "*"
 djangorestframework-simplejwt = "*"
 djoser = "*"
 django-cors-headers = "*"
+django-heroku = "*"
+dj-database-url = "*"
+whitenoise = "*"
 
 [requires]
 python_version = "3.7"
