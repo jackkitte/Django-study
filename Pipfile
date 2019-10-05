@@ -22,6 +22,7 @@ django-cors-headers = "*"
 django-heroku = "*"
 dj-database-url = "*"
 whitenoise = "*"
+django-debug-toolbar = "*"
 
 [requires]
 python_version = "3.7"
