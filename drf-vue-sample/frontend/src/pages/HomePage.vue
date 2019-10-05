@@ -4,7 +4,7 @@
     <GlobalMessage/>
 
     <!-- メインエリア -->
-    <main class="container">
+    <main class="container homepage">
       <p class="h5 mb-4">ホーム</p>
       <b-form @submit.prevent="submitSave">
         <div class="row form-group">
