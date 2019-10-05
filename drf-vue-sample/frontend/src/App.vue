@@ -13,6 +13,9 @@ main.container {
   border: 1px solid #cccccc;
   margin-top: 4em;
   padding: 2em;
-  width: 600px;
+  width: 1200px;
+}
+.row .col-md-4 {
+  padding: 5px;
 }
 </style>
