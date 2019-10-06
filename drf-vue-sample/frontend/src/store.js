@@ -9,20 +9,32 @@ const authModule = {
   namespaced: true,
   state: {
     username: '',
-    isLoggedIn: false
+    isLoggedIn: false,
+    isSuperUser: false,
+    isStaff: false,
+    isActive: false,
   },
   getters: {
     username: state => state.username,
-    isLoggedIn: state => state.isLoggedIn
+    isLoggedIn: state => state.isLoggedIn,
+    isSuperUser: state => state.isSuperUser,
+    isStaff: state => state.isStaff,
+    isActive: state => state.isActive,
   },
   mutations: {
     set (state, payload) {
       state.username = payload.user.username
       state.isLoggedIn = true
+      state.isSuperUser = payload.user.is_superuser
+      state.isStaff = payload.user.is_staff
+      state.isActive = payload.user.is_active
     },
     cleare (state) {
       state.username = ''
       state.isLoggedIn = false
+      state.isSuperUser = false
+      state.isStaff = false
+      state.isActive = false
     }
   },
   actions: {
@@ -45,6 +57,7 @@ const authModule = {
       return api.get('/auth/users/me/')
         .then(response => {
           const user = response.data
+          console.log(user)
           context.commit('set', { user: user})
           return user
         })
