@@ -1,7 +1,7 @@
-from django.contrib.auth.models import User
 from rest_framework import serializers
 
 from shop.models import Book
+from .models import User
 
 
 class BookSerializer(serializers.ModelSerializer):

@@ -1,4 +1,3 @@
-from django.contrib.auth.models import User
 from rest_framework import viewsets
 from rest_framework.permissions import (
     IsAuthenticatedOrReadOnly, IsAuthenticated
@@ -6,6 +5,7 @@ from rest_framework.permissions import (
 
 
 from shop.models import Book
+from .models import User
 from .serializers import (
     BookSerializer, UserSerializer
 )
