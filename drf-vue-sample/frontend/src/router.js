@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import HomePage from '@/pages/HomePage'
 import LoginPage from '@/pages/LoginPage'
 import UsersPage from '@/pages/UsersPage'
+import UserCreatePage from '@/pages/UserCreatePage'
 import store from '@/store'
 
 Vue.use(VueRouter)
@@ -33,6 +34,7 @@ const router = new VueRouter({
         }
       }
     },
+    { path: '/register', component: UserCreatePage },
     { path: '/login', component: LoginPage },
     { path: '*', redirect: '/'}
   ]
