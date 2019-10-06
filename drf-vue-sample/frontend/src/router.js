@@ -11,7 +11,28 @@ const router = new VueRouter({
   mode: 'history',
   routes: [
     { path: '/', component: HomePage, meta: { requiresAuth: true } },
-    { path: '/users', component: UsersPage, meta: { requiresAuth: true } },
+    { path: '/users',
+      component: UsersPage,
+      meta: { requiresAuth: true },
+      beforeEnter: (to, from, next) => {
+        const isSuperUser = store.getters['auth/isSuperUser']
+        const isStaff = store.getters['auth/isStaff']
+        const isActive = store.getters['auth/isActive']
+        console.log('isSuperUser=', isSuperUser)
+        console.log('isStaff=', isStaff)
+        console.log('isActive=', isActive)
+
+        if (isSuperUser || isStaff) {
+          console.log('User is Admin or Staff. So, free to next.')
+          next()
+        } else if (isActive) {
+          console.log('User is Normal. So, redirect to Top Page.')
+          forceToLoginPage(to, from, next)
+        } else {
+          forceToLoginPage(to, from, next)
+        }
+      }
+    },
     { path: '/login', component: LoginPage },
     { path: '*', redirect: '/'}
   ]
