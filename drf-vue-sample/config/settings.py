@@ -115,6 +115,10 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTH_USER_MODEL = 'apiv1.User'
 
+DJOSER = {
+    'USER_PASSWORD_RETYPE': True,
+}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/

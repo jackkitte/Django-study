@@ -83,8 +83,13 @@ export default {
       })
         .then(response => {
           const message = '登録しました。'
+          const user = response.data
           this.$store.dispatch('message/setInfoMessage', { message: message })
-          this.form.user = response.data
+          this.form.user.username = user.username
+          this.form.user.email = user.email
+          this.form.user.isSuperUser = user.is_superuser
+          this.form.user.isStaff = user.is_staff
+          this.form.user.isActive = use.is_active
         })
     }
   }

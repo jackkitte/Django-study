@@ -34,7 +34,7 @@ const router = new VueRouter({
         }
       }
     },
-    { path: '/register', component: UserCreatePage },
+    { path: '/register', component: UserCreatePage, meta: { requiresAuth: true } },
     { path: '/login', component: LoginPage },
     { path: '*', redirect: '/'}
   ]
