@@ -6,35 +6,27 @@
     <main class="container">
       <p class="h5 mb-4">ユーザー登録</p>
       <b-form @submit.prevent="submitRegister">
-        <div class="row form-group">
-          <label class="col-sm-3 col-form-label">ユーザー名</label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" v-model="form.user.username" placeholder="ユーザー名">
-          </div>
-        </div>
-        <div class="row form-group">
-          <label class="col-sm-3 col-form-label">メールアドレス</label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" v-model="form.user.email" placeholder="メールアドレス">
-          </div>
-        </div>
-        <div class="row form-group">
-          <label class="col-sm-3 col-form-label">パスワード</label>
-          <div class="col-sm-8">
-            <input type="password" class="form-control" v-model="form.user.password" placeholder="パスワード">
-          </div>
-        </div>
-        <div class="row form-group">
-          <label class="col-sm-3 col-form-label">パスワード確認用</label>
-          <div class="col-sm-8">
-            <input type="password" class="form-control" v-model="form.user.repassword" placeholder="パスワード確認用">
-          </div>
-        </div>
-        <div class="row">
-          <b-form-checkbox class="col-sm-3" v-model="form.user.isSuperUser">管理者権限</b-form-checkbox>
-          <b-form-checkbox class="col-sm-3" v-model="form.user.isStaff">スタッフ権限</b-form-checkbox>
-          <b-form-checkbox class="col-sm-3" v-model="form.user.isActive">ログイン権限</b-form-checkbox>
-        </div>
+        <b-form-group label="ユーザー名" label-for="input-user">
+          <b-form-input id="iput-user" type="text" v-model="form.user.username" placeholder="ユーザー名">
+          </b-form-input>
+        </b-form-group>
+        <b-form-group label="メールアドレス" label-for="input-email">
+          <b-form-input id="iput-email" type="email" v-model="form.user.email" placeholder="メールアドレス">
+          </b-form-input>
+        </b-form-group>
+        <b-form-group label="パスワード" label-for="input-password">
+          <b-form-input id="iput-password" type="password" v-model="form.user.password" placeholder="パスワード">
+          </b-form-input>
+        </b-form-group>
+        <b-form-group label="パスワード確認用" label-for="input-repassword">
+          <b-form-input id="iput-repassword" type="password" v-model="form.user.repassword" placeholder="パスワード確認用">
+          </b-form-input>
+        </b-form-group>
+        <b-form-row>
+          <b-form-checkbox class="pr-2" v-model="form.user.isSuperUser">管理者権限</b-form-checkbox>
+          <b-form-checkbox class="pr-2" v-model="form.user.isStaff">スタッフ権限</b-form-checkbox>
+          <b-form-checkbox class="pr-2" v-model="form.user.isActive">ログイン権限</b-form-checkbox>
+        </b-form-row>
         <div class="row text-center mt-5">
           <div class="col-sm-12">
             <b-button type="submit" variant="primary">登録</b-button>
@@ -89,7 +81,7 @@ export default {
           this.form.user.email = user.email
           this.form.user.isSuperUser = user.is_superuser
           this.form.user.isStaff = user.is_staff
-          this.form.user.isActive = use.is_active
+          this.form.user.isActive = user.is_active
         })
     }
   }

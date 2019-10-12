@@ -4,6 +4,9 @@ import HomePage from '@/pages/HomePage'
 import LoginPage from '@/pages/LoginPage'
 import UsersPage from '@/pages/UsersPage'
 import UserCreatePage from '@/pages/UserCreatePage'
+import ProfilePage from '@/pages/ProfilePage'
+import ResumeCardsPage from '@/pages/ResumeCardsPage'
+import ResumePage from '@/pages/ResumePage'
 import store from '@/store'
 
 Vue.use(VueRouter)
@@ -34,6 +37,9 @@ const router = new VueRouter({
         }
       }
     },
+    { path: '/profile', component: ProfilePage },
+    { path: '/resumecards', component: ResumeCardsPage },
+    { path: '/resumes/:recipId', component: ResumePage },
     { path: '/register', component: UserCreatePage, meta: { requiresAuth: true } },
     { path: '/login', component: LoginPage },
     { path: '*', redirect: '/'}
