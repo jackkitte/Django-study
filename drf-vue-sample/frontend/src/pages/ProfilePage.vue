@@ -11,7 +11,8 @@
           <b-card border-variant="secondary" bg-variant="info" text-variant="white" class="mb-2">
             <b-row no-gutters>
               <b-col md=3>
-                <b-card-img src="https://i.imgur.com/rNRG0gR.png" class="rounded-0"></b-card-img>
+                <!-- <b-card-img src="https://i.imgur.com/rNRG0gR.png" class="rounded-0"></b-card-img> -->
+                <b-card-img src="../assets/ponkue_kaku.jpeg" class="rounded-0"></b-card-img>
               </b-col>
               <b-col md=9>
                 <b-card-body title="玉城 翔（たましろ　かける）">
