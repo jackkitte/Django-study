@@ -11,8 +11,7 @@
           <b-card border-variant="secondary" bg-variant="info" text-variant="white" class="mb-2">
             <b-row no-gutters>
               <b-col md=3>
-                <!-- <b-card-img src="https://i.imgur.com/rNRG0gR.png" class="rounded-0"></b-card-img> -->
-                <b-card-img src="../assets/ponkue_kaku.jpeg" class="rounded-0"></b-card-img>
+                <b-card-img src="@/assets/ponkue_kaku.jpeg" class="rounded-0"></b-card-img>
               </b-col>
               <b-col md=9>
                 <b-card-body title="玉城 翔（たましろ　かける）">
@@ -145,6 +144,17 @@
               <b-badge variant="primary" class="mr-1">ElasticStack 1年未満</b-badge>
             </div>
           </b-card>
+          <b-row>
+            <b-col>
+              <b-link class="pr-2" href="https://github.com/jackkitte" target="_blank" rel="noopener"><b-img src="@/assets/github.png" width="120"></b-img></b-link>
+            </b-col>
+            <b-col>
+              <b-link class="pr-2" href="https://qiita.com/jackkitte" target="_blank" rel="noopener"><b-img src="@/assets/qiita.png" width="120"></b-img></b-link>
+            </b-col>
+            <b-col>
+              <b-link class="pr-2" href="https://bookmeter.com/users/776128" target="_blank" rel="noopener"><b-img src="@/assets/bookmeter.png" width="120"></b-img></b-link>
+            </b-col>
+          </b-row>
         </b-col>
       </b-row>
     </main>
