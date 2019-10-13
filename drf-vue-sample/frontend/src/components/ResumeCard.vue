@@ -7,6 +7,13 @@
       <b-card-text>
         <strong>プロジェクト:</strong><br>{{ resume.project }}
       </b-card-text>
+      <b-card-text v-if="resume.line_data.is_line">
+        <b-link :href="resume.line_data.line_ref" target="_blank" rel="noopener">
+          <b-img :src="resume.line_data.line_img" width="100"></b-img>
+        </b-link>
+        <br>
+        {{ resume.line_data.line_text}}
+      </b-card-text>
       <b-button-group>
         <b-row>
           <b-col md=4>

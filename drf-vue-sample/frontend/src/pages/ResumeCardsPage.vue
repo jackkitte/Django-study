@@ -32,6 +32,12 @@ const sampleData = [
     companyName: "気象系会社",
     picture: require("@/assets/lambda.png"),
     project: "LINE防災チャットボット研究開発",
+    line_data: {
+      is_line: true,
+      line_text: "神戸市との実証実験で運用中の防災チャットボット",
+      line_ref: "http://nav.cx/7oplHUy",
+      line_img: "https://scdn.line-apps.com/n/line_add_friends/btn/ja.png",
+    },
     term: "2018年8月 ~ 現在",
     overview: `メッセージングツール（LINEなど）の活用による、国民一人ひとりへの避難支援を実現するシステムの開発
 ・被災通報などを通して国民一人ひとりの社会動態/被災状況把握を行い、政府の災害対応における「情報収集の効率化/省力化」それに伴う「意思決定の高度化/迅速化」
@@ -58,6 +64,9 @@ const sampleData = [
     companyName: "SI会社の新規事業部",
     picture: require("@/assets/nodejs.png"),
     project: "チャットボット導入検討",
+    line_data: {
+      is_line: false,
+    },
     term: "2018年1月 ~ 2018年7月",
     overview: `オペレーションセンターの業務効率化を測るためのchatbotシステムの検証を行っております。当初の取り組みとしては、Jumanを用いて形態素解析したテキストデータをknpに入力することで構文解析を行います。構文解析を行うことで、問合せ内容の文脈の意図を推定することができ、問合せに対応した回答を返すことができるようになります。例えば「Office365とは何ですか？」、「Office365の利用方法は何ですか？」の場合ですと、前者はOffice365自体についての概要が知りたいという意図が推定でき、後者はOffice365の導入方法や使い方、利用に必要な環境などが知りたいという意図が推定できます。
 
@@ -71,6 +80,9 @@ const sampleData = [
     companyName: "SI会社の新規事業部",
     picture: require("@/assets/elasticstack.png"),
     project: "検索エンジンシステムの検証",
+    line_data: {
+      is_line: false,
+    },
     term: "2018年1月 ~ 2018年7月",
     overview: `オペレーションセンターに蓄積されたテキストデータ(ナレッジ情報)の有効活用として、自然言語解析を行っておりましたが、別のアプローチとして、ナレッジ検索システムを構築すれば良いのではと考え、Elasticsearchを用いた検索システムの検証を行っております。
 
