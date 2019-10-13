@@ -4,7 +4,7 @@
     <GlobalMessage/>
 
     <!-- メインエリア -->
-    <main class="container" id="profile">
+    <main class="container">
       <p class="h5 mb-4">プロフィール</p>
       <b-row>
         <b-col>

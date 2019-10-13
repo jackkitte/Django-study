@@ -3,7 +3,7 @@
     <GlobalHeader />
     <GlobalMessage />
 
-    <main class="container" id="userspage">
+    <main class="container">
       <p class="h5 mb-4">ホーム</p>
       <div class="row">
         <div class="col-xs-6 col-md-4" v-for="(user, index) in users" :key="index">

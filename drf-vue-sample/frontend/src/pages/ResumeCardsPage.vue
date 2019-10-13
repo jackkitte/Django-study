@@ -3,20 +3,20 @@
     <GlobalHeader/>
     <GlobalMessage/>
 
-    <main class="container mt-5">
-      <div class="row">
-        <div class="col-12 text-right mb-4">
+    <main class="container mt-4">
+      <b-row>
+        <b-col md=12 class="text-right mb-4">
           <div class="d-flex justify-content-between">
-            <h3>La Resumes</h3>
+            <h3>経　歴　一　覧</h3>
             <router-link to="/resumecards/add" class="btn btn-info">Add Resume</router-link>
           </div>
-        </div>
-        <template v-for="recipe in recipes">
-          <div :key="recipe.id" class="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <ResumeCard :onDelete="deleteResume" :recipe="recipe"/>
+        </b-col>
+        <template v-for="resume in resumes">
+          <div :key="resume.id" class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <ResumeCard :onDelete="deleteResume" :resume="resume"/>
           </div>
         </template>
-      </div>
+      </b-row>
     </main>
   </div>
 </template>
@@ -72,16 +72,16 @@ export default {
   },
   data() {
     return {
-      recipes: []
+      resumes: []
     };
   },
   created: function () {
     let data = sampleData;
-    this.recipes = data
+    this.resumes = data
   },
   methods: {
     deleteResume(recipe_id) {
-      console.log(deleted `${recipe.id}`)
+      console.log(deleted `${resume.id}`)
     }
   }
 };

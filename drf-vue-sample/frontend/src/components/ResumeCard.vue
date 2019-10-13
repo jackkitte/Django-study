@@ -1,15 +1,15 @@
 <template>
-  <div class="card recipe-card">
-    <img :src="recipe.picture" class="card-img-top" >
+  <div class="card resume-card">
+    <img :src="resume.picture" class="card-img-top" >
     <div class="card-body">
-      <h5 class="card-title">{{ recipe.name }}</h5>
+      <h5 class="card-title">{{ resume.name }}</h5>
       <p class="card-text">
-        <strong>Ingredients:</strong> {{ recipe.ingredients }}
+        <strong>Ingredients:</strong> {{ resume.ingredients }}
       </p>
       <div class="action-buttons">
-        <router-link :to="`/resumes/${recipe.id}`" class="btn btn-sm btn-success"> View </router-link>
-        <router-link :to="`/resumes/${recipe.id}/edit`" class="btn btn-sm btn-primary"> Edit </router-link>
-        <button @click="onDelete(recipe.id)"  class="btn btn-sm btn-danger">Delete</button>
+        <router-link :to="`/resumes/${resume.id}`" class="btn btn-sm btn-success"> View </router-link>
+        <router-link :to="`/resumes/${resume.id}/edit`" class="btn btn-sm btn-primary"> Edit </router-link>
+        <button @click="onDelete(resume.id)"  class="btn btn-sm btn-danger">Delete</button>
       </div>
     </div>
   </div>
@@ -17,7 +17,7 @@
 
 <script>
 export default {
-    props: ["recipe", "onDelete"]
+    props: ["resume", "onDelete"]
 };
 </script>
 

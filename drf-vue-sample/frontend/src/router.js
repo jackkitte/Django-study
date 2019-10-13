@@ -39,7 +39,7 @@ const router = new VueRouter({
     },
     { path: '/profile', component: ProfilePage },
     { path: '/resumecards', component: ResumeCardsPage },
-    { path: '/resumes/:recipId', component: ResumePage },
+    { path: '/resumes/:resumeId', component: ResumePage },
     { path: '/register', component: UserCreatePage, meta: { requiresAuth: true } },
     { path: '/login', component: LoginPage },
     { path: '*', redirect: '/'}

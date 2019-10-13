@@ -4,7 +4,7 @@
     <GlobalMessage/>
 
     <!-- メインエリア -->
-    <main class="container">
+    <main class="container" id="login-container">
       <p class="h5 mb-4">ログイン</p>
       <b-form @submit.prevent="submitLogin">
         <div class="row form-group">
@@ -62,3 +62,12 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+#login-container {
+  border: 1px solid #cccccc;
+  margin-top: 4em;
+  padding: 2em;
+  width: 600px;
+}
+</style>

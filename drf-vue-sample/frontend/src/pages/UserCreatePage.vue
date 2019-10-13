@@ -3,7 +3,7 @@
     <GlobalHeader/>
     <GlobalMessage/>
 
-    <main class="container">
+    <main class="container" id="user-create-container">
       <p class="h5 mb-4">ユーザー登録</p>
       <b-form @submit.prevent="submitRegister">
         <b-form-group label="ユーザー名" label-for="input-user">
@@ -87,3 +87,12 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+#user-create-container {
+  border: 1px solid #cccccc;
+  margin-top: 4em;
+  padding: 2em;
+  width: 600px;
+}
+</style>

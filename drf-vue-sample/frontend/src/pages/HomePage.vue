@@ -4,7 +4,7 @@
     <GlobalMessage/>
 
     <!-- メインエリア -->
-    <main class="container">
+    <main class="container" id="homepage-container">
       <p class="h5 mb-4">ホーム</p>
       <b-form @submit.prevent="submitSave">
         <div class="row form-group">
@@ -74,3 +74,12 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+#homepage-container {
+  border: 1px solid #cccccc;
+  margin-top: 4em;
+  padding: 2em;
+  width: 600px;
+}
+</style>
