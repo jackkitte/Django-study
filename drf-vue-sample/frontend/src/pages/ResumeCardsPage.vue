@@ -3,7 +3,7 @@
     <GlobalHeader/>
     <GlobalMessage/>
 
-    <main class="container mt-4">
+    <b-container class="container mt-4">
       <b-row>
         <b-col md=12 class="text-right mb-4">
           <div class="d-flex justify-content-between">
@@ -17,7 +17,7 @@
           </b-col>
         </template>
       </b-row>
-    </main>
+    </b-container>
   </div>
 </template>
 

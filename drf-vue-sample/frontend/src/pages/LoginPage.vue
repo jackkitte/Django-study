@@ -4,7 +4,7 @@
     <GlobalMessage/>
 
     <!-- メインエリア -->
-    <main class="container" id="login-container">
+    <b-container class="container" id="login-container">
       <p class="h5 mb-4">ログイン</p>
       <b-form @submit.prevent="submitLogin">
         <div class="row form-group">
@@ -25,7 +25,7 @@
           </div>
         </div>
       </b-form>
-    </main>
+    </b-container>
   </div>
 </template>
 

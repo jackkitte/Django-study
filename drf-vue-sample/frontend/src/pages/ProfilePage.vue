@@ -4,7 +4,7 @@
     <GlobalMessage/>
 
     <!-- メインエリア -->
-    <main class="container">
+    <b-container class="container">
       <p class="h5 mb-4">プロフィール</p>
       <b-row>
         <b-col>
@@ -157,7 +157,7 @@
           </b-row>
         </b-col>
       </b-row>
-    </main>
+    </b-container>
   </div>
 </template>
 

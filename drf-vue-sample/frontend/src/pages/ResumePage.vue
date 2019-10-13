@@ -3,7 +3,7 @@
     <GlobalHeader/>
     <GlobalMessage/>
 
-    <main class="container my-5">
+    <b-container class="container my-5">
       <b-row>
         <b-col cols=12 class="text-center my-3">
           <h2 class="mb-3 display-4 text-uppercase">{{ resume.companyName }}</h2>
@@ -42,7 +42,7 @@
           </div>
         </b-col>
       </b-row>
-    </main>
+    </b-container>
   </div>
 </template>
 

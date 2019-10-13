@@ -9,7 +9,7 @@
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   color: #2c3e50;
 }
-main.container {
+.container {
   border: 1px solid #cccccc;
   margin-top: 1em;
   margin-bottom: 4em;

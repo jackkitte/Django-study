@@ -3,7 +3,7 @@
     <GlobalHeader/>
     <GlobalMessage/>
 
-    <main class="container" id="user-create-container">
+    <b-container class="container" id="user-create-container">
       <p class="h5 mb-4">ユーザー登録</p>
       <b-form @submit.prevent="submitRegister">
         <b-form-group label="ユーザー名" label-for="input-user">
@@ -33,7 +33,7 @@
           </div>
         </div>
       </b-form>
-    </main>
+    </b-container>
   </div>
 </template>
 
