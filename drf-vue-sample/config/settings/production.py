@@ -1,12 +1,7 @@
 import django_heroku
 import dj_database_url
-import environ
 
 from .base import *
-
-# Read .env if exists
-env = environ.Env()
-env.read_env(os.path.join(BASE_DIR, '.env'))
 
 
 #####################
@@ -15,6 +10,7 @@ env.read_env(os.path.join(BASE_DIR, '.env'))
 
 DEBUG = False
 
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 
