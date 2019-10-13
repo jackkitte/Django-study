@@ -47,7 +47,7 @@ import GlobalMessage from '@/components/GlobalMessage.vue'
 const sampleData = [
   {
     id: 1,
-    companyName: "株式会社ウェザーニューズ",
+    companyName: "気象系会社",
     picture: require("@/assets/lambda.png"),
     project: "LINE防災チャットボット研究開発",
     term: "2018年8月 ~ 現在",
@@ -73,7 +73,7 @@ const sampleData = [
   },
   {
     id: 2,
-    companyName: "株式会社つうけんアドバンスシステムズ",
+    companyName: "SI会社の新規事業部",
     picture: require("@/assets/nodejs.png"),
     project: "チャットボット導入検討",
     term: "2018年1月 ~ 2018年7月",
@@ -86,7 +86,7 @@ const sampleData = [
   },
   {
     id: 3,
-    companyName: "株式会社つうけんアドバンスシステムズ",
+    companyName: "SI会社の新規事業部",
     picture: require("@/assets/elasticstack.png"),
     project: "検索エンジンシステムの検証",
     term: "2018年1月 ~ 2018年7月",

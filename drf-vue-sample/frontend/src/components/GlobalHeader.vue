@@ -2,7 +2,7 @@
   <!-- ヘッダナビゲーション -->
   <div id="header">
     <b-navbar toggleable="lg" type="dark" variant="primary">
-      <b-navbar-brand href="/">jackkitteの部屋</b-navbar-brand>
+      <b-navbar-brand to="/">jackkitteの部屋</b-navbar-brand>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav>
@@ -12,7 +12,7 @@
           <b-navbar-nav class="ml-auto">
             <b-nav-item-dropdown right v-if="isLoggedIn">
               <template slot="button-content">{{ username }}</template>
-              <b-dropdown-item to="/" @click="clickLogout">ログアウト</b-dropdown-item>
+              <b-dropdown-item href="/register" @click="clickLogout">ログアウト</b-dropdown-item>
               <b-dropdown-item to="/users">ユーザー一覧</b-dropdown-item>
               <b-dropdown-item to="/register">ユーザー追加</b-dropdown-item>
             </b-nav-item-dropdown>

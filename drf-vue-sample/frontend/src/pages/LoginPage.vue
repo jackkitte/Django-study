@@ -55,7 +55,7 @@ export default {
         .then(() => {
           console.log('Login succeeded.')
           this.$store.dispatch('message/setInfoMessage', { message: 'ログインしました。' })
-          const next = this.$route.query.next || '/'
+          const next = this.$route.query.next || '/register'
           this.$router.replace(next)
         })
     }

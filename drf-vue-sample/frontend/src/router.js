@@ -14,7 +14,7 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   mode: 'history',
   routes: [
-    { path: '/', component: HomePage, meta: { requiresAuth: true } },
+    { path: '/', component: HomePage },
     { path: '/users',
       component: UsersPage,
       meta: { requiresAuth: true },
