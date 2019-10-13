@@ -56,7 +56,7 @@ const sampleData = [
   {
     id: 2,
     companyName: "株式会社つうけんアドバンスシステムズ",
-    picture: require("@/assets/lambda.png"),
+    picture: require("@/assets/nodejs.png"),
     project: "チャットボット導入検討",
     term: "2018年1月 ~ 2018年7月",
     overview: `オペレーションセンターの業務効率化を測るためのchatbotシステムの検証を行っております。当初の取り組みとしては、Jumanを用いて形態素解析したテキストデータをknpに入力することで構文解析を行います。構文解析を行うことで、問合せ内容の文脈の意図を推定することができ、問合せに対応した回答を返すことができるようになります。例えば「Office365とは何ですか？」、「Office365の利用方法は何ですか？」の場合ですと、前者はOffice365自体についての概要が知りたいという意図が推定でき、後者はOffice365の導入方法や使い方、利用に必要な環境などが知りたいという意図が推定できます。
@@ -67,9 +67,9 @@ const sampleData = [
     develop: `自然言語処理/Bot開発周りの知見を有しているものがおりませんので、情報収集から開発まですべて一人で行っております。`
   },
   {
-    id: 2,
+    id: 3,
     companyName: "株式会社つうけんアドバンスシステムズ",
-    picture: require("@/assets/lambda.png"),
+    picture: require("@/assets/elasticstack.png"),
     project: "検索エンジンシステムの検証",
     term: "2018年1月 ~ 2018年7月",
     overview: `オペレーションセンターに蓄積されたテキストデータ(ナレッジ情報)の有効活用として、自然言語解析を行っておりましたが、別のアプローチとして、ナレッジ検索システムを構築すれば良いのではと考え、Elasticsearchを用いた検索システムの検証を行っております。

@@ -1,6 +1,6 @@
 <template>
   <div id="resumecard">
-    <b-card :title="resume.companyName" :img-src="resume.picture" img-top>
+    <b-card :title="resume.companyName" :img-src="resume.picture" img-top img-height=250>
       <b-card-text>
         {{ resume.term }}
       </b-card-text>
