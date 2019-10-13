@@ -9,13 +9,14 @@
             <b-nav-item to="/profile">プロフィール</b-nav-item>
             <b-nav-item to="/resumecards">経歴一覧</b-nav-item>
           </b-navbar-nav>
-          <b-navbar-nav class="ml-auto" v-if="$route.meta.requiresAuth">
+          <b-navbar-nav class="ml-auto">
             <b-nav-item-dropdown right v-if="isLoggedIn">
               <template slot="button-content">{{ username }}</template>
-              <b-dropdown-item to="/login" @click="clickLogout">ログアウト</b-dropdown-item>
+              <b-dropdown-item to="/" @click="clickLogout">ログアウト</b-dropdown-item>
               <b-dropdown-item to="/users">ユーザー一覧</b-dropdown-item>
               <b-dropdown-item to="/register">ユーザー追加</b-dropdown-item>
             </b-nav-item-dropdown>
+            <b-nav-item right v-else to="/login">ログイン</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
     </b-navbar>
