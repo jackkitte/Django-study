@@ -3,34 +3,53 @@
     <GlobalHeader/>
     <GlobalMessage/>
 
-    <!-- メインエリア -->
-    <main class="container" id="homepage-container">
-      <p class="h5 mb-4">ホーム</p>
-      <b-form @submit.prevent="submitSave">
-        <div class="row form-group">
-          <label class="col-sm-3 col-form-label">タイトル</label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" v-model="form.book.title">
-          </div>
-        </div>
-        <div class="row form-group">
-          <label class="col-sm-3 col-form-label">価格</label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" v-model="form.book.price">
-          </div>
-        </div>
-        <div class="row text-center mt-5">
-          <div class="col-sm-12">
-            <b-button type="submit" variant="primary">{{ isCreated ? '更 新' : '登 録' }}</b-button>
-          </div>
-        </div>
-      </b-form>
-    </main>
+    <div class="py-4">
+      <b-jumbotron header="jackkitteの部屋へようこそ！" bg-variant="info" text-variant="white">
+        <p>Vue.jsとDjango + django-rest-frameworkとBootstrapVueでプロフィールサイトを作ってみました！！</p>
+        <b-button variant="primary" to="/profile">プロフィール</b-button>
+      </b-jumbotron>
+      <b-carousel
+        id="carousel-1"
+        v-model="slide"
+        :interval="4000"
+        controls
+        indicators
+        background="#ababab"
+        img-width="1024"
+        img-height="480"
+        style="text-shadow: 1px 1px 2px #333;"
+        @sliding-start="onSlideStart"
+        @sliding-end="onSlideEnd"
+      >
+        <b-carousel-slide
+          caption="Hello!, I'm Pythonista."
+          text="We are developing a LINE disaster prevention chatbot in Python!"
+          img-src="https://picsum.photos/1024/480/?image=52"
+        ></b-carousel-slide>
+        <b-carousel-slide
+          caption="I love Python3!"
+          text="Recently I have been developing with Vue.js for studying the front end."
+          img-src="https://picsum.photos/1024/480/?image=54">
+        </b-carousel-slide>
+        <b-carousel-slide
+          caption="I love AWS too!"
+          text="We are also developing on AWS!"
+          img-src="https://picsum.photos/1024/480/?image=58"
+        ></b-carousel-slide>
+        <b-carousel-slide
+          caption="I love Anime!"
+          img-src="https://picsum.photos/1024/480/?image=10"
+        ></b-carousel-slide>
+        <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=55">
+          <h1>Thank you for being here!</h1>
+        </b-carousel-slide>
+      </b-carousel>
+
+    </div>
   </div>
 </template>
 
 <script>
-import api from '@/services/api'
 import GlobalHeader from '@/components/GlobalHeader.vue'
 import GlobalMessage from '@/components/GlobalMessage.vue'
 
@@ -39,47 +58,19 @@ export default {
     GlobalHeader,
     GlobalMessage
   },
-  data () {
+  data() {
     return {
-      form: {
-        book: {
-          title: '',
-          price: 0
-        }
-      }
-    }
-  },
-  computed: {
-    isCreated: function () {
-      return this.form.book.id !== undefined
+      slide: 0,
+      sliding: null
     }
   },
   methods: {
-    submitSave: function () {
-      api({
-        method: this.isCreated ? 'put' : 'post',
-        url: this.isCreated ? '/books/' + this.form.book.id + '/' : '/books/',
-        data: {
-          'id': this.form.book.id,
-          'title': this.form.book.title,
-          'price': this.form.book.price
-        }
-      })
-        .then(response => {
-          const message = this.isCreated ? '更新しました。' : '登録しました。'
-          this.$store.dispatch('message/setInfoMessage', { message: message })
-          this.form.book = response.data
-        })
+    onSlideStart(slide) {
+      this.sliding = true
+    },
+    onSlideEnd(slide) {
+      this.sliding = false
     }
   }
 }
 </script>
-
-<style scoped>
-#homepage-container {
-  border: 1px solid #cccccc;
-  margin-top: 4em;
-  padding: 2em;
-  width: 600px;
-}
-</style>
