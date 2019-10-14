@@ -14,7 +14,7 @@
                 <b-card-img src="@/assets/ponkue_kaku.jpeg" class="rounded-0"></b-card-img>
               </b-col>
               <b-col md=9>
-                <b-card-body title="玉城 翔（たましろ　かける）">
+                <b-card-body title="jackkitte（じゃっきって）">
                   <b-row>
                     <b-col>年齢：</b-col><b-col>29</b-col>
                   </b-row>
@@ -23,6 +23,9 @@
                   </b-row>
                   <b-row>
                     <b-col>出身地：</b-col><b-col>沖縄</b-col>
+                  </b-row>
+                  <b-row>
+                    <b-col>住所：</b-col><b-col>東京</b-col>
                   </b-row>
                 </b-card-body>
               </b-col>
